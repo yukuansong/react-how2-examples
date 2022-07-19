@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
+
 import { useState } from "react";
 import axios from "axios";
+import './loading-axios-get.css'
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -12,7 +12,7 @@ function App() {
     axios.get('/get-data')
           .then((response) => {
             setIsLoading(false);
-            console.log("the response is: " +response);
+            console.log("the response is: " +response.data);
           })
           .catch((error) => {
             console.log("something is wrong : " + error)
@@ -34,7 +34,7 @@ function App() {
 
 const Loader = () => {
   return (
-    <h3> I am loading.....</h3>
+    <div className="loader"/>
   )
 }
 
