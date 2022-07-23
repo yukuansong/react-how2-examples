@@ -1,0 +1,25 @@
+
+h1 {
+    font-size: 30px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageNumbers {
+    list-style: none;
+    display: flex;
+}
+
+.pageNumbers li {
+    padding: 10px;
+    border: 1px solid white;
+}
+.pageNumbers li.active {
+    background-color: blue;
+    color: white;
+}
